@@ -3,7 +3,6 @@ import controller from './hero.controller';
 import './hero.styl';
 
 let heroComponent = {
-  restrict: 'E',
   bindings: {},
   template,
   controller,

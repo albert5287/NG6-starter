@@ -1,9 +1,8 @@
 import template from './app.html';
 import './app.styl';
 
-let appComponent = {
-  template,
-  restrict: 'E'
+const appComponent = {
+  template
 };
 
 export default appComponent;

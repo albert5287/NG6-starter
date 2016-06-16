@@ -2,10 +2,10 @@ import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import homeComponent from './home.component';
 
-let homeModule = angular.module('home', [
+const home = angular.module('home', [
   uiRouter
 ])
-
+.component('home', homeComponent)
 .config(($stateProvider, $urlRouterProvider) => {
   "ngInject";
 
@@ -14,10 +14,9 @@ let homeModule = angular.module('home', [
   $stateProvider
     .state('home', {
       url: '/',
-      template: '<home></home>'
+      component: 'home'
     });
 })
+.name;
 
-.component('home', homeComponent);
-
-export default homeModule;
+export default home;

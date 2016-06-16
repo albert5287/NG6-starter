@@ -2,10 +2,11 @@ import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import heroComponent from './hero.component';
 
-let heroModule = angular.module('hero', [
+const hero = angular.module('hero', [
   uiRouter
 ])
 
-.component('hero', heroComponent);
+.component('hero', heroComponent)
+.name;
 
-export default heroModule;
+export default hero;

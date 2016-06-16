@@ -1,14 +1,16 @@
+import 'normalize.css';
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
-import Common from './common/common';
 import Components from './components/components';
+import Common from './common/common';
 import AppComponent from './app.component';
-import 'normalize.css';
 
-angular.module('app', [
+console.log(Common);
+const root = angular
+.module('app', [
     uiRouter,
-    Common.name,
-    Components.name
+    Common,
+    Components
   ])
   .config(($locationProvider) => {
     "ngInject";
@@ -18,3 +20,5 @@ angular.module('app', [
   })
 
   .component('app', AppComponent);
+
+  export default root;
